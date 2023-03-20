@@ -1,11 +1,10 @@
 import React from 'react';
-import Navigation from './Navigation';
+import LAPS from '../assets/LAPS.svg'
 
 function Header() {
     return (
         <header>
-            <h1>LAPS22 </h1>
-            <Navigation />
+        <img src={LAPS} alt="logo" />
         </header>
     );
 }

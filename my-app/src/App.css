@@ -1,10 +1,15 @@
+img {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
   background-color: #8C2641;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -22,7 +27,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  text-decoration: none;
   color: #F2CED8;
 }
 

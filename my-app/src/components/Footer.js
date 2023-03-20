@@ -3,10 +3,9 @@ import React from "react";
 function Footer() {
     return (
         <footer>
-
-            <h3>Placeholder</h3>
-
-
+            <p>Created by Lian 💕</p>
+            <a>LinkedIn</a>
+            <a>GitHub</a>
         </footer>
     )
 };

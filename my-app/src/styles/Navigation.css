@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    color: #FAACC4;
+    /* filter: drop-shadow(0 0 5px rgba(245, 201, 222, 0.5)); */
+}
+nav {
+    display: flex;
+  }
+  
+  nav a {
+    margin-right: 1em;
+  }
+  
