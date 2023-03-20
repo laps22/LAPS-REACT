@@ -1,87 +1,100 @@
 import React from 'react';
+import I1 from '../../src/assets/images/I1.png';
+import I2 from '../../src/assets/images/I2.png';
+import I3 from '../../src/assets/images/I3.png';
+import I4 from '../../src/assets/images/I4.png';
+import I5 from '../../src/assets/images/I5.png';
 
-// We declare an object called styles that will contain a few objects for card and heading styles
-// Notice that each key lists CSS styles in camel case
-const styles = {
-    card: {
-        margin: 20,
-        background: '#fefae0',
-    },
-    heading: {
-        background: '#d4a373',
-        minHeight: 50,
-        lineHeight: 3.5,
-        fontSize: '1.2rem',
-        color: 'white',
-        padding: '0 20px',
-    },
-    content: {
-        padding: 20,
-    },
-};
 
-// In `Card`, we can assign a style from an object by using curly braces
-// We are assigning the card, heading, and content all from our `style` object
+const PortfolioData = [
+    {
+        id: 1,
+        image: I1,
+        title: "README.md Generator",
+        github: "https://github.com/laps22/in-the-node",
+        demo: "https://drive.google.com/file/d/1tfmvAc56hJDPuPY5Y3_C9KiVHWIMQa1W/view",
+
+    },
+    {
+        id: 2,
+        image: I2,
+        title: "Employee SQL Database",
+        github: "https://github.com/laps22/employee-tracker",
+        demo: "https://drive.google.com/file/d/14CkABw9eZMlQ5IztjnAavRQWwmaiej8Z/view",
+    },
+    {
+        id: 3,
+        image: I3,
+        title: "Brew Buddy 🍺",
+        github: "https://github.com/albertosuarez8/Brewery-Reviews",
+        demo: "https://breweries-reviews.herokuapp.com/",
+    },
+    {
+        id: 4,
+        image: I4,
+        title: "Express Note Taker",
+        github: "https://github.com/laps22/note-taker",
+        demo: "https://liannotetaker.herokuapp.com/",
+    },
+    {
+        id: 5,
+        image: I5,
+        title: "Progessive Text Editor",
+        github: "https://github.com/laps22/Progressive-Text-Editor",
+        demo: "https://progressive-text.herokuapp.com/",
+    },
+    // {
+    //     id: 6,
+    //     image: "",
+    //     title: "Coming Soon! Georgia Evergreens",
+    //     github: "",
+    //     demo: "",
+    // },
+];
+
+// const styles = {
+//     card: {
+//         margin: 20,
+//         background: '#fefae0',
+//     },
+//     heading: {
+//         background: '#d4a373',
+//         minHeight: 50,
+//         lineHeight: 3.5,
+//         fontSize: '1.2rem',
+//         color: 'white',
+//         padding: '0 20px',
+//     },
+//     content: {
+//         padding: 20,
+//     },
+// };
+
 function ProjectCard() {
     return (
         <body>
-            <div style={styles.card}>
-                <div style={styles.heading}>Lorem ipsum dolor</div>
-                <div style={styles.content}>
-                    `Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                    eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                    quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                    voluptas nulla pariatur?`
-                </div>
-            </div>
+            <h5>My Recent Work</h5>
+            <div>
+                {PortfolioData.map(({ id, image, title, github, demo }) => {
+                    return (
+                        <section key={id}>
+                            <div>
+                                <h2>{title}</h2>
+                                <img src={image} alt={title}></img>
+                            </div>
 
-            <div style={styles.card}>
-                <div style={styles.heading}>Lorem ipsum dolor</div>
-                <div style={styles.content}>
-                    `Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                    eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                    quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                    voluptas nulla pariatur?`
-                </div>
-            </div>
+                            <div>
+                                <a href={github}>Github</a>
+                                <br></br>
+                                <a href={demo}>View App</a>
+                            </div>
+                        </section>
+                    );
+                })}
 
-            <div style={styles.card}>
-                <div style={styles.heading}>Lorem ipsum dolor</div>
-                <div style={styles.content}>
-                    `Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                    eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                    quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                    voluptas nulla pariatur?`
-                </div>
             </div>
         </body>
+
     );
 }
 
