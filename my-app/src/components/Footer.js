@@ -4,8 +4,8 @@ function Footer() {
     return (
         <footer>
             <p>Created by Lian 💕</p>
-            <a>LinkedIn</a>
-            <a>GitHub</a>
+            <p>LinkedIn</p>
+            <p>GitHub</p>
         </footer>
     )
 };
