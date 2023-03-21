@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import '../styles/Navigation.css';
 
 
@@ -23,10 +23,10 @@ import '../styles/Navigation.css';
 function Navigation() {
   return (
     <nav>
-      <NavLink to="/about">About Me</NavLink>
-      <NavLink to="/portfolio">Portfolio</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-      <NavLink to="/resume">Resume</NavLink>
+      <Link to="/about">About Me</Link>
+      <Link to="/portfolio">Portfolio</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/resume">Resume</Link>
     </nav>
   );
 }
