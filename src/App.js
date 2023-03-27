@@ -7,26 +7,26 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <body className='App'> 
 
-    <div className='App'>
-      <Header className='header' />
+    <div className='header'>
+      <Header  />
       <Router>
         <Navigation />
-        <Portfolio />
-        <div>
-          <Route path="/About" component={About} />
-          <Route path="/portfolio" component={Portfolio} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/resume" component={Resume} />
-        </div>
+        <Routes>
+          <Route path="/About" element={<About/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/resume" element={<Resume/>} />
+        </Routes>
       </Router>
       <Footer />
     </div>
-
+</body>
   );
 }
 
