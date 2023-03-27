@@ -79,8 +79,10 @@ function Portfolio() {
                 return (
                     <section key={id}>
                         <div className="card">
-                            <h2 className="heading">{title}</h2>
-                            <img src={image} alt={title}></img>
+                            <h2 className="heading">{title} 
+                            <br></br>
+                            <img src={image} alt={title}></img></h2>
+                           
                             <div>
                                 <a href={github}>Github</a>
                                 <br></br>
