@@ -49,27 +49,27 @@ const PortfolioData = [
         image: gelogo,
         title: "Georgia Evergreens",
         github: "https://github.com/magmesser/georgia-evergreens",
-        demo: "Coming Soon!",
+        demo: "https://georgia-evergreens.herokuapp.com/",
     },
 ];
 
-// const styles = {
-//     card: {
-//         margin: 20,
-//         background: '#fefae0',
-//     },
-//     heading: {
-//         background: '#d4a373',
-//         minHeight: 50,
-//         lineHeight: 3.5,
-//         fontSize: '1.2rem',
-//         color: 'white',
-//         padding: '0 20px',
-//     },
-//     content: {
-//         padding: 20,
-//     },
-// };
+const styles = {
+    card: {
+        margin: 20,
+        background: '#fefae0',
+    },
+    heading: {
+        background: '#d4a373',
+        minHeight: 50,
+        lineHeight: 3.5,
+        fontSize: '1.2rem',
+        color: 'white',
+        padding: '0 20px',
+    },
+    content: {
+        padding: 20,
+    },
+};
 
 function Portfolio() {
     return (
@@ -81,9 +81,11 @@ function Portfolio() {
                         <div className="card">
                             <h2 className="heading">{title} 
                             <br></br>
-                            <img src={image} alt={title}></img></h2>
+                            </h2>
                            
                             <div>
+                                <img src={image} alt={title}></img>
+                                <br></br>
                                 <a href={github}>Github</a>
                                 <br></br>
                                 <a href={demo}>View App</a>

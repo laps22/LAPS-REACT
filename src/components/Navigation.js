@@ -22,8 +22,8 @@ import '../styles/Navigation.css';
 
 function Navigation() {
   return (
-    <nav>
-      <a href="/">About Me</a>
+    <nav className='Nav'>
+      <a href="/About">About Me</a>
       <a href="/portfolio">Portfolio</a>
       <a href="/contact">Contact</a>
       <a href="/resume">Resume</a>

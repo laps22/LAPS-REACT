@@ -30,8 +30,15 @@ img {
   color: #F2CED8;
 }
 
+
+
 .App-link {
   color: #FAACC4;
+}
+
+.Nav {
+  justify-content: center;
+
 }
 
 @keyframes App-logo-spin {
